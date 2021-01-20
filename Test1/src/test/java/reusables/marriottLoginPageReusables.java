@@ -1,7 +1,5 @@
 package reusables;
 
-import java.sql.Driver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,38 +8,38 @@ import controls.marriottControls;
 
 public class marriottLoginPageReusables implements marriottControls {
 	
-	public static WebDriver driver;
+	public WebDriver driver;
 
-	public static void setPropertyChrome() {
+	public void setPropertyChrome() {
 		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 	}
 	
-	public static void launchChromeBrowser() {
+	public void launchChromeBrowser() {
 		driver = new ChromeDriver();
 	}
 
-	public static void maximizeBrowser() {
+	public void maximizeBrowser() {
 		driver.manage().window().maximize();
 	}
 	
-	public static void enterUrl() {
-		driver.get("https://www.marriott.com/default.mi");
+	public void enterUrl(String url) {
+		driver.get(url);
 	}
 	
-	public static void clickSignInLink() throws InterruptedException {
+	public void clickSignInLink() throws InterruptedException {
 		driver.findElement(By.xpath(SignInJoin_Link)).click();
 		Thread.sleep(3000);
 	}
 	
-	public static void closeCurrentBrowser() {
+	public void closeCurrentBrowser() {
 		driver.close();
 	}
 	
-	public static void closeAllBrowser() {
+	public void closeAllBrowser() {
 		driver.quit();
 	}
 	
-	public static void enterPassword() {
+	public void enterPassword() {
 		driver.findElement(By.name(Password_Textbox)).sendKeys("");
 	}
 }
