@@ -5,7 +5,7 @@
     <classes>
       <class name="testScripts.Test0001">
         <methods>
-          <include name="afetrExecution"/>
+          <include name="marriottLogin"/>
           <include name="executeBeforeTest"/>
           <include name="facebookLogin"/>
         </methods>

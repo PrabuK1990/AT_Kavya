@@ -11,7 +11,7 @@ public class marriottLoginPageReusables implements marriottControls {
 	public WebDriver driver;
 
 	public void setPropertyChrome() {
-		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\RSK Director\\Kavya\\kavya Eclipse\\chromedriver.exe");
 	}
 	
 	public void launchChromeBrowser() {
@@ -39,8 +39,17 @@ public class marriottLoginPageReusables implements marriottControls {
 		driver.quit();
 	}
 	
+	public void enterEmailtextbox() {
+	    driver.findElement(By.id(Email_Textbox)).sendKeys("marriott@123");	
+	}
+	
 	public void enterPassword() {
-		driver.findElement(By.name(Password_Textbox)).sendKeys("");
+		driver.findElement(By.name(Password_Textbox)).sendKeys("12345");
+	}
+	
+	public void signIn() {
+		driver.findElement(By.xpath(SignIn)).click();
+		
 	}
 }
 

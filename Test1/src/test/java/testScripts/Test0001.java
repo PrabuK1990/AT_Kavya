@@ -19,6 +19,9 @@ public class Test0001 extends marriottLoginPageReusables {
 		maximizeBrowser();
 		enterUrl("https://www.marriott.com/default.mi");
 		clickSignInLink();
+		enterEmailtextbox();
+		enterPassword();
+		signIn();
 	}
 	
 	@Test(priority = 2)
