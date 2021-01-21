@@ -5,13 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import controls.marriottControls;
+import resources.LoadExcel;
 
-public class marriottLoginPageReusables implements marriottControls {
+public class marriottLoginPageReusables extends LoadExcel implements marriottControls {
 	
 	public WebDriver driver;
 
 	public void setPropertyChrome() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\RSK Director\\Kavya\\kavya Eclipse\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 	}
 	
 	public void launchChromeBrowser() {
@@ -22,7 +23,7 @@ public class marriottLoginPageReusables implements marriottControls {
 		driver.manage().window().maximize();
 	}
 	
-	public void enterUrl(String url) {
+	public void enterUrl() {
 		driver.get(url);
 	}
 	
@@ -40,11 +41,11 @@ public class marriottLoginPageReusables implements marriottControls {
 	}
 	
 	public void enterEmailtextbox() {
-	    driver.findElement(By.id(Email_Textbox)).sendKeys("marriott@123");	
+	    driver.findElement(By.id(Email_Textbox)).sendKeys(usr);	
 	}
 	
 	public void enterPassword() {
-		driver.findElement(By.name(Password_Textbox)).sendKeys("12345");
+		driver.findElement(By.name(Password_Textbox)).sendKeys(pass);
 	}
 	
 	public void signIn() {

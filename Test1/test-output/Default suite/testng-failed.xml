@@ -7,7 +7,6 @@
         <methods>
           <include name="marriottLogin"/>
           <include name="executeBeforeTest"/>
-          <include name="facebookLogin"/>
         </methods>
       </class> <!-- testScripts.Test0001 -->
     </classes>
