@@ -12,7 +12,7 @@ public class marriottLoginPageReusables extends LoadExcel implements marriottCon
 	public WebDriver driver;
 
 	public void setPropertyChrome() {
-		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\RSK Director\\Kavya\\kavya Eclipse\\chromedriver.exe");
 	}
 	
 	public void launchChromeBrowser() {

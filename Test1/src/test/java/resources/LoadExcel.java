@@ -18,7 +18,7 @@ public class LoadExcel {
 	
 	public void loadInputsfromConfigExcel() throws IOException {
 		
-		FileInputStream file = new FileInputStream(new File("resources/config.xlsx"));
+		FileInputStream file = new FileInputStream(new File("resources/configs.xlsx"));
 		
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
 		
