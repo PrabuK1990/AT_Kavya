@@ -86,6 +86,14 @@ public interface marriottControls {
 	public String Cancel = "js-cancel"; //Id
 	public String Already_Member_Val = "//p[contains(text(),'Already a Member?')]"; //Xpath
 	public String Activate_Online_Account_Link = "//a[contains(text(),'Activate online account')]"; //Xpath
+	public String Unlock_Stay_text = "//div[contains(text(),'Unlock your stay with the Marriott Bonvoy™ App')]"; //Xpath
 	public String Learn_More_Link = "//span[contains(text(),'Learn More')]"; //Xpath
+	public String Facebook_Linktext = "https://www.facebook.com/marriottbonvoy"; //LinkText
+	public String Instagram_Linktext = "https://www.instagram.com/marriottbonvoy"; //LinkText
+	public String Twitter_linktext = "https://www.twitter.com/marriottbonvoy"; //LinkText
+	public String Messenger_Linktext = "https://www.messenger.com/t/marriottbonvoy"; //LinkText
+	public String Youtube_linktext = "https://www.youtube.com/marriott"; //LinkText
+	public String Mobile_Image = "//div[@class='mtAppAdBannerImg']/../../../..//img"; //doubt
+	public String Top_destination_drpdown = "//div[@id='TransactionalFooterLinks3268']/div/section/div/a/p/span/span[2]"; //Xpath (doubt)
 
 }
