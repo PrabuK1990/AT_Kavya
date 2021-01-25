@@ -16,10 +16,10 @@ public class TestScript001 extends SignInPage {
 	public void executeBeforeTest() throws IOException {
 		setPropertyChrome();
 		loadInputsfromConfigExcel();
-		launchChromeBrowser();
+		//launchBrowser();
 	}
 	
-	@Test(priority = 1)
+	@Test//Smoke Test
 	public void marriottLogin() throws InterruptedException {
 		maximizeBrowser();
 		enterUrl();
@@ -29,7 +29,7 @@ public class TestScript001 extends SignInPage {
 		signIn();
 	}
 	
-	//@Test(priority = 2)
+	@Test//Regression Test
 	public void facebookLogin() throws InterruptedException {
 		maximizeBrowser();
 		enterUrl();

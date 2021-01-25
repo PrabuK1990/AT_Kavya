@@ -5,23 +5,26 @@ import java.io.IOException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameter;
 
 import reusables.SignInPage;
 
 public class HomePageE2E extends SignInPage {
 
 	@BeforeMethod
-	public void startSession() throws IOException, InterruptedException {
-		setPropertyChrome();
+	 @Parameters("browser")  
+	public void startSession(String browser) throws IOException, InterruptedException {
 		loadInputsfromConfigExcel();
 		loadHomePageInputs();
-		launchChromeBrowser();
-		maximizeBrowser();
+		launchBrowser(browser);
+		//maximizeBrowser();
 		enterUrl();
 	}
 	
-	@Test
+	@Test//Smoke Test
 	public void positiveScenario01() throws InterruptedException, AWTException {
 		enterDestination();
 		selectStartEndDate();
@@ -30,6 +33,16 @@ public class HomePageE2E extends SignInPage {
 		clickUsePointsCheckbox();
 		clickFindHotelsButton();
 	}
+	
+//	@Test//Regression Test
+//	public void NagetiveScenario01() throws InterruptedException, AWTException {
+//		enterDestination();
+//		selectStartEndDate();
+//		verifyRoomsAndGuests();
+//		verifySpecialRates();
+//		clickUsePointsCheckbox();
+//		clickFindHotelsButton();
+//	}
 	
 	@AfterMethod
 	public void closeSession() {

@@ -10,6 +10,8 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class LoadExcel {
 	
@@ -68,6 +70,9 @@ public class LoadExcel {
 	
 	
 	public static void main (String args[]) throws IOException {
+		System.setProperty("webdriver.edge.driver", "resources/msedgedriver");
+		WebDriver driver = new EdgeDriver();
+		driver.get("https://www.javatpoint.com/testng-parameters");
 //		
 //		FileInputStream file = new FileInputStream(new File("resources/MariottInputs.xlsx"));
 //		

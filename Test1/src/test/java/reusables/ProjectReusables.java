@@ -4,6 +4,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
 import controls.MarriottControls;
 import resources.LoadExcel;
 
@@ -13,12 +17,24 @@ public class ProjectReusables extends LoadExcel implements MarriottControls {
 
 	//Set property  for chrome and Path to chromedriver
 	public void setPropertyChrome() {
-		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+		
 	}
 	
 	//Launch automated chrome browser
-	public void launchChromeBrowser() {
-		driver = new ChromeDriver();
+	public void launchBrowser(String brow) {
+		if(brow.equalsIgnoreCase("Chrome")) {
+			System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+			driver = new ChromeDriver();
+		}	
+		
+		else if(brow.equalsIgnoreCase("Firefox")) {
+			System.setProperty("webdriver.gecko.driver", "resources/geckodriver");
+			driver = new FirefoxDriver();
+		}
+		
+		else if(brow.equalsIgnoreCase("Safari")) {
+			driver = new SafariDriver();
+		}
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "Default Suite" thread-count = "3" parallel="tests">
+
+	<test name="FirefoxTest">
+	<parameter name="browser" value="Firefox" />
+    	<classes>
+        	<class name="testScripts.HomePageE2E"></class>
+    	</classes>
+	</test>
+	
+	<test name="ChromeTest">
+    <parameter name="browser" value="Chrome" />
+    	<classes>
+        	<class name="testScripts.HomePageE2E"></class>
+    	</classes>
+	</test>
+	
+	<test name="SafariTest">
+    <parameter name="browser" value="Safari" />
+    	<classes>
+        	<class name="testScripts.HomePageE2E"></class>
+    	</classes>
+	</test>
+
+</suite>
