@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="testScripts.Test0001">
+      <class name="testScripts.HomePageE2E">
         <methods>
-          <include name="afetrExecution"/>
-          <include name="marriottLogin"/>
-          <include name="executeBeforeTest"/>
+          <include name="closeSession"/>
+          <include name="positiveScenario01"/>
+          <include name="startSession"/>
         </methods>
-      </class> <!-- testScripts.Test0001 -->
+      </class> <!-- testScripts.HomePageE2E -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
