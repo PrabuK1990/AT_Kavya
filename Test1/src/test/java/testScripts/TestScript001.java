@@ -22,7 +22,7 @@ public class TestScript001 extends SignInPage {
 	@Test//Smoke Test
 	public void marriottLogin() throws InterruptedException {
 		maximizeBrowser();
-		enterUrl();
+		enterUrl(url);
 		clickSignInLink();
 		enterEmailtextbox();
 		enterPassword();
@@ -32,7 +32,7 @@ public class TestScript001 extends SignInPage {
 	@Test//Regression Test
 	public void facebookLogin() throws InterruptedException {
 		maximizeBrowser();
-		enterUrl();
+		enterUrl(url);
 	}
 	
 	@AfterMethod

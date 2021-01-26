@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="testScripts.HomePageE2E">
+      <class name="restassured.API_Automation">
         <methods>
-          <include name="closeSession"/>
-          <include name="positiveScenario01"/>
-          <include name="startSession"/>
+          <include name="beforeMethod"/>
+          <include name="getDetails"/>
         </methods>
-      </class> <!-- testScripts.HomePageE2E -->
+      </class> <!-- restassured.API_Automation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

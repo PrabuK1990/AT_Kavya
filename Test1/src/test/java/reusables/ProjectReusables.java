@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -44,10 +45,17 @@ public class ProjectReusables extends LoadExcel implements MarriottControls {
 	}
 	
 	//Enter the url from excel
-	public void enterUrl() throws InterruptedException {
-		driver.get(url);
+	public void enterUrl(String URL) throws InterruptedException {
+		driver.get(URL);
 	}
 	
+	//Enter the url from excel
+	public void nagivateBack() throws InterruptedException {
+		driver.navigate().back();
+		driver.navigate().refresh();
+	}
+		
+		
 	public void closeCurrentBrowser() {
 		driver.close();
 	}

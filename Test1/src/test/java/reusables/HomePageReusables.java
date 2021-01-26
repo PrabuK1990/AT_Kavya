@@ -3,9 +3,11 @@ package reusables;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.security.Key;
 import java.time.LocalDate;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -15,17 +17,33 @@ public class HomePageReusables extends ProjectReusables {
 		driver.findElement(By.xpath(HP_SignInJoinLink)).click();
 		//Thread.sleep(3000);
 	}
+	
+	public void findHotels(String Dest, String StartDate, String EndDate, String Rooms, String Adults, String Childrens, String Specialrates) throws AWTException, InterruptedException {
+		enterDestination(Dest);
+		selectStartEndDate();
+		verifyRoomsAndGuests();
+		verifySpecialRates(Specialrates);
+		clickUsePointsCheckbox();
+		clickFindHotelsButton();
+	}
 
-	public void enterDestination() throws AWTException, InterruptedException {
+	public void enterDestination(String Destination) throws AWTException, InterruptedException {
 		WebElement enter = driver.findElement(By.name(HP_DestinationTextbox));
-		enter.sendKeys(dest);
+		enter.sendKeys(Destination);
 		Thread.sleep(2000);
-		Robot robo = new Robot();
-		robo.keyPress(KeyEvent.VK_ENTER);
-		robo.keyRelease(KeyEvent.VK_ENTER);
+		enter.sendKeys(Keys.ENTER);
+//		Robot robo = new Robot();
+//		Thread.sleep(2000);
+//		robo.keyPress(KeyEvent.VK_ENTER);
+//		robo.keyRelease(KeyEvent.VK_ENTER);
+	}
+	
+	public void clearDestination() {
+		driver.findElement(By.name(HP_DestinationTextbox)).clear();
 	}
 
 	public void selectStartEndDate() throws InterruptedException {
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(HP_StartDateArrow)).click();
 		WebElement startdate = driver.findElement(By.xpath(HP_StartDate));
 		String date = startdate.getAttribute("value");
@@ -47,9 +65,9 @@ public class HomePageReusables extends ProjectReusables {
 		driver.findElement(By.xpath(HP_AddRoomsButton)).click();
 	}
 
-	public void verifySpecialRates() {
+	public void verifySpecialRates(String SpecialRate) {
 		String specialrate = driver.findElement(By.xpath(HP_SpecialRates)).getText();
-		Assert.assertEquals(specialrate, specialrates);
+		Assert.assertEquals(specialrate, SpecialRate);
 	}
 
 	public void clickUsePointsCheckbox() throws InterruptedException {

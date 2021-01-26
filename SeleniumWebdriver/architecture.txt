@@ -1,0 +1,11 @@
+In Selenium Webdriver jar / maven dependency we have following,
+
+1. Interface - WebDriver
+2. Class - ChromeDriver, FirefoxDriver, SafariDriver
+3. Functions/Methods - get, sendKeys, click, close
+4. Test Scripts
+
+Selenium IDE(2005)
+Selenium RC(2006)
+Selenium Webdriver(2008) --> 2009
+Selenium Grid 

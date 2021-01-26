@@ -1,49 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
-  <test parallel="tests" name="FirefoxTest(failed)">
-    <parameter name="browser" value="Firefox"/>
-    <classes>
-      <class name="testScripts.HomePageE2E">
-        <methods>
-          <include name="closeSession"/>
-          <include name="closeSession"/>
-          <include name="positiveScenario01"/>
-          <include name="startSession"/>
-          <include name="startSession"/>
-          <include name="startSession"/>
-        </methods>
-      </class> <!-- testScripts.HomePageE2E -->
-    </classes>
-  </test> <!-- FirefoxTest(failed) -->
+<suite thread-count="1" parallel="tests" name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test parallel="tests" name="ChromeTest(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="testScripts.HomePageE2E">
+      <class name="testScripts.HomePageMultipleEntries">
         <methods>
-          <include name="closeSession"/>
-          <include name="closeSession"/>
           <include name="positiveScenario01"/>
-          <include name="startSession"/>
-          <include name="startSession"/>
+          <include name="closeSession"/>
           <include name="startSession"/>
         </methods>
-      </class> <!-- testScripts.HomePageE2E -->
+      </class> <!-- testScripts.HomePageMultipleEntries -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
-  <test parallel="tests" name="SafariTest(failed)">
-    <parameter name="browser" value="Safari"/>
-    <classes>
-      <class name="testScripts.HomePageE2E">
-        <methods>
-          <include name="closeSession"/>
-          <include name="closeSession"/>
-          <include name="positiveScenario01"/>
-          <include name="startSession"/>
-          <include name="startSession"/>
-          <include name="startSession"/>
-        </methods>
-      </class> <!-- testScripts.HomePageE2E -->
-    </classes>
-  </test> <!-- SafariTest(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

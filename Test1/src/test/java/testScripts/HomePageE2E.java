@@ -21,15 +21,15 @@ public class HomePageE2E extends SignInPage {
 		loadHomePageInputs();
 		launchBrowser(browser);
 		//maximizeBrowser();
-		enterUrl();
+		enterUrl(url);
 	}
 	
 	@Test//Smoke Test
 	public void positiveScenario01() throws InterruptedException, AWTException {
-		enterDestination();
+		enterDestination(dest);
 		selectStartEndDate();
 		verifyRoomsAndGuests();
-		verifySpecialRates();
+		verifySpecialRates(specialrates);
 		clickUsePointsCheckbox();
 		clickFindHotelsButton();
 	}
