@@ -1,0 +1,20 @@
+Class - a class is a template or blueprint from which objects can be created.
+Objects - objects is a instance of a class which can be reused in the form of methods/functions.
+Method -  a method is set of code which is referred by its name and can be invoked at any point of time by simply using method name.
+
+Overriding - overriding means re-defining body of a method of superclass in a subclass. but different implementation.
+Overloading - when two or more methods in the same class have same name but different parameters.
+
+Interface - an interface is a blueprint of a class or multiple class, it does't have method implementation and it should have only abstract methods.
+Abstract Method - abstract method is a method that is declared, but contains no implementation.
+Abstract Class - abstract class is the one which contains one or more abstract methods.
+Constructor - constructor should have same name as class name and it should execute first whenever the class is invoked.  
+
+Extends - extends means that you are creating a subclass of the class you are extending(only Class to Class extends possible).
+Implements - implements is for implementing an interface(only Interface to Class implements possible).
+
+Inheritance - inheritance allows a class to use the methods and properties of another class.
+
+Encapsulation - in java, encapsulation is a mechanism of wrapping up data and code together in a single unit.
+Polymorphism - it refers to the ability of variable, function or object to take on multiple forms.
+Static - a static is a keyword which belong to class rather than object of a class.
