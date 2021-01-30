@@ -17,8 +17,12 @@ public class TestRunner01 extends NovotelReusables {
 	}
 
 @Test
-public void Test001()
+public void Test001() throws InterruptedException
 {
+	buttonLogo();
+	login();
+	userName();
+	passWord();
 	System.out.println("test1 success");
 }
 	

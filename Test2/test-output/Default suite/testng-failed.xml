@@ -5,7 +5,9 @@
     <classes>
       <class name="testRunner.TestRunner01">
         <methods>
+          <include name="startSession"/>
           <include name="closeSession"/>
+          <include name="Test001"/>
         </methods>
       </class> <!-- testRunner.TestRunner01 -->
     </classes>

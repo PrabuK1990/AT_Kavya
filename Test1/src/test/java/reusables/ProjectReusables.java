@@ -24,7 +24,7 @@ public class ProjectReusables extends LoadExcel implements MarriottControls {
 	//Launch automated chrome browser
 	public void launchBrowser(String brow) {
 		if(brow.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
 			driver = new ChromeDriver();
 		}	
 		
