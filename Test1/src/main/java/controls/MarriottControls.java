@@ -25,6 +25,7 @@ public interface MarriottControls {
 	public String Remember_chkbox = "remember-me"; //Id
 	public String Remember_chkbox_val = "//label[@for='remember-me']"; //Xpath
 	public String SignIn = "//button[text()=' Sign In ']"; //xpath
+	public String SignIn_Error = "SignInErrorComponent_01_b947"; //Id
 	public String Join_Marriott_Bonvoy = "//h3[contains(text(),'Join Marriott Bonvoy')]"; //xpath
 	public String Login_Facebook = "//div[@title='Sign in to your account with Facebook']"; //xpath
 	public String JoinNow_Button = "//a[text()=' Join Now  ']"; //xpath
