@@ -1,10 +1,12 @@
 package reusbales;
 
 import java.io.File;
+import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.print.attribute.standard.Destination;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -30,10 +32,10 @@ public class NaukriReusables implements NaukriLocators{
 		driver.get(url);
 	}
 	
-	public void takeScreenshot() {
+	public void takeScreenshot() throws IOException {
 		//Object TakesScreenshot;
-		//File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		//FileUtils.copyFile(src,new File("C:\\Users\\RSK Director\\Kavya\\error.png"));
+		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src,new File("C:\\Users\\RSK Director\\Kavya\\error.png"));
 		//Ashot screenshot = new Ashot().takeScreenshot(driver);
 		//ImageIO.write(screenshot.getImage(), "jpg", new File("C:\\Users\\RSK Director\\Kavya"));
 	}
